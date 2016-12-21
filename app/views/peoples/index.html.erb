@@ -1,0 +1,14 @@
+<h1>Peeps</h1>
+
+<div ng-app="app">
+  <div ng-controller="peopleCtrl">
+    <ul>
+      <li ng-repeat="person in people">
+        <p ng-click="displayBio(person)">{{ person.name }}</p>
+        <p ng-if="isVisible(person)">{{ person.bio }}</p>
+      </li>
+    </ul>
+    <h3>Add a person</h3>
+      <input model="people">
+  </div>
+</div>
